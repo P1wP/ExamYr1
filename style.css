@@ -6,6 +6,10 @@ body, footer{
 
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     background-image: url(img/2012_-_9_crs1_launch.jpg);
     background-repeat: no-repeat;
@@ -16,7 +20,7 @@ body{
         NAV/header
 ------------------------*/
 header{
-    background-color: black;
+    background-color: #313030;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
@@ -25,15 +29,22 @@ header{
 .logo{
     float: right;
     margin-right: 10px;
+    height: 30px;
+}
+
+#hamburger, #closeNav{
+    height: 30px;
+    cursor: pointer;
 }
 
 #navigation{
-    background-color: greenyellow;
+    background-color: rgba(109,109,109, 0.6);
     position: fixed;
     top: 0;
     left: -300px;
     z-index: 1;
-    transition-duration: 2s;
+    transition-duration: 1s;
+    height: 100vh;
     
     
 }
@@ -43,6 +54,12 @@ header{
     padding: 0;
     display: block;
 }
+
+.navList li a{
+    text-decoration: none;
+    color: white;
+}
+
 
 .navItem{
     font-size: 32px;
@@ -77,13 +94,26 @@ header{
 
 #content{
     width: 70%;
-    height: 300px;
-    background-color: blue;
+    max-height: 300px;
+    background-color: rgba(109,109,109, 0.6);
     margin: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 15%;
+}
+
+/* HOME/INDEX */
+.contentHome{
+    text-align: center;
+    font-family: 'Play', sans-serif;
+
+}
+.imgContentHome{
+    max-width: 50px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 
@@ -97,14 +127,17 @@ header{
     bottom: 0vh;
     height: 30px;
     width: 100%;
-    transition-duration: 2s;
+    transition-duration: 1s;
     
+}
+#arrowUp{
+    width: 100%;
+    max-width: 20px;
+    cursor: pointer;
 }
 
 #footerReveal{
-    color: white;
     text-align: center;
-    font-size: 32px;
 }
 
 #footerCol{
@@ -112,9 +145,13 @@ header{
     display: grid;
     grid-template-columns: auto auto auto;
 }
+
+#col_1{
+    margin-left: 33%;
+}
 .footerContent{
     color: white;
-    text-align: center;
+    text-align: left;
 }
 
 .footerContent ul{
@@ -129,11 +166,11 @@ header{
 
 
 #footer:hover{
-    background-color: red;
+    background-color: rgba(109,109,109, 0.6);
     position:absolute;
     bottom: 0vh;
     width: 100%;
-    height: 20vh;
+    height: 17vh;
     transition-duration: 2s;
 }
 
