@@ -75,12 +75,9 @@ header{
 }
 
 .navItem:hover{
-    background-color: red;
+    background-color: rgba(109,109,109, 1);
 }
 
-.active{
-    color:blue;
-}
 
 /*--------------------------
             CONTENT
@@ -93,14 +90,15 @@ header{
 }
 
 #content{
-    width: 70%;
-    max-height: 300px;
-    background-color: rgba(109,109,109, 0.6);
+    width: 100%;
+    max-height: 400px;
+    background-color: rgba(109,109,109, 0.4);
+    border-radius: 10px;
     margin: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 15%;
+    
 }
 
 /* HOME/INDEX */
@@ -116,6 +114,97 @@ header{
     cursor: pointer;
 }
 
+/* Rockets */
+
+.rocketContent{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rocketHeading{
+    width: 100%;
+    flex-direction: row;
+}
+
+#rocketImg{
+    width: 20%;
+    text-align: center;
+    
+}
+#img{
+    height: 250px;
+}
+
+#rocketData{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-left: 10%;
+}
+
+#rocket_col{
+    flex-direction: column;
+    width: 50%;
+}
+#rocket_row{
+    flex-direction: row;
+    width: 100%;
+}
+
+.title{
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+#mass, #hight, #stages, #diameter{
+    margin-top: 0;
+}
+
+.smaller{
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/* SPACE */
+
+#contentSpaceStream iframe{
+    width: 50%;
+}
+
+
+/* Contact Us */
+.contactContact{
+    text-align: center;
+}
+#contactForm{
+    width: 30%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#contactEmail, #contactText, #contactBtn{
+    width: 100%;
+    border-style: none;
+    margin-bottom: 5px;
+    border-radius: 2.5px;
+}
+
+#contactText{
+    height: 100px;
+}
+
+#contactBtn{
+    color: white;
+    background-color: #313030;
+    cursor: pointer;
+    height: 30px;
+}
+
+#contactBtn:hover{
+    background-color: rgba(255,255,255, 0.6);
+    color: rgb(0,0,0);
+}
 
 
 
@@ -142,27 +231,38 @@ header{
 
 #footerCol{
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#col_1{
-    margin-left: 33%;
+#col_1, #col_2, #col_3{
+    width: 33%;
 }
-.footerContent{
+#col_1{
+    
+}
+.footerContent, .footerContent a{
     color: white;
-    text-align: left;
+    text-align: center;
+}
+
+.footerContent a{
+    cursor: pointer;
 }
 
 .footerContent ul{
     list-style: none;
+    padding: 0;
 }
-
+#footerIcons{
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
 #footerIcons img{
-    margin: 0 auto 0 7%;  
+    margin: 0 auto; 
+    
 }
-
-
 
 
 #footer:hover{
@@ -170,10 +270,7 @@ header{
     position:absolute;
     bottom: 0vh;
     width: 100%;
-    height: 17vh;
+    height: 19vh;
     transition-duration: 2s;
 }
 
-#footer:hover + #footerReveal{
-    color: blue;
-}

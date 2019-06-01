@@ -4,62 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link type="text/css" rel="stylesheet" href="style.css">
-	<title> Test </title>
+<link type="text/css" rel="stylesheet" href="../style.css">
+<link href="https://fonts.googleapis.com/css?family=Play:700&display=swap" rel="stylesheet">
+
+	<title> Rockets </title>
 </head>
 
 <body>
     <header>
-        <div class = "logo"><img src ="icons/spacex_logo_white.png" alt="SpaceX Logo"> </div>
-        <img id="hamburger" alt ="Hamburger">
+        <div class = "logo"><img src ="../icons/spacex_logo_white.png" alt="SpaceX Logo"> </div>
+        <img id="hamburger" src="../icons/SVG/hamburger.svg" alt ="Hamburger">
         <nav id = "navigation">
             <ul class = "navList">
-                <img id="closeNav" src="d">
-                <li class = "active , navItem" id = navSpaceX>SpaceX</li>
-                <li class = "navItem" id = "navRockets">Rockets</li>
-                <li class = "navItem" id = "navSpace">Space</li>
-                <li class = "navItem" id = "navMars">Mars</li>
-                <li class = "navItem" id = "navContact">Contact Us</li>
+                <img id="closeNav" src="../icons/SVG/close.svg">
+                <li class ="navItem" id ="navSpaceX"><a href="../index.html">Home</a></li>
+                <li class ="navItem" id ="navRockets"><a href="rockets.html">Tech</a></li>
+                <li class ="navItem" id ="navSpace"><a href="space.html">Space</a></li>
+                <li class ="navItem" id ="navMars"><a href="mars.html">Mars</a></li>
+                <li class ="navItem" id ="navContact"><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main id="container">
-        <div id="content">
-        some content
+        <div id="content" class="rocketContent">
+            <div class ="contentHome rocketHeading" id="name"><h1>Falcon 9</h1></div>
+            <div id="rocketImg">
+                <img id="img" src="../icons/rocket_img/SVG/falcon9.svg" alt="Icon Falcon 9">
+            </div>
+            <div id="rocketData">
+                <div id="rocket_col">
+                    <p class="title"><b>Hight</b></p>
+                    <p id="hight">70m <span id="hightFeet" class="smaller">229,6ft</span></p>
+                </div>
+                <div id="rocket_col">
+                    <p class="title">Diameter</p>
+                    <p id="diameter">3,7m <span id="diameterFeet" class="smaller">12ft</span></p>
+                </div>
+                <div id="rocket_row">
+                    <p class="title">Stages</p>
+                    <p id="stages">2 <span class="smaller">&#40;1st stages reusable &#41;</span></p>
+                </div>
+                <div id="rocket_row">
+                <p class="title"><b>Mass</b></p>
+                <p id="mass">549,054Kg <span id="massLb" class="smaller">1,207,920lb</span></p>
+                </div>
+            </div>
         </div>
     </main>
     <footer id="footer">
+        <div id="footerReveal">
+            <img id="arrowUp" src="../icons/SVG/arrowUp.svg" alt="View footer">
+        </div>
         <div id = "footerCol">
             <div class = "footerContent" id="col_1">
             <ul class = "footerList">
-                <li>a</li>
-                <li id = navSpaceX>SpaceX</li>
-                <li id = "navRockets">Rockets</li>
+                <li id = navSpaceX><a href="../index.html">Home</a></li>
+                <li id = "navRockets"><a href="rockets.html">Tech</a></li>
             </ul>
             </div>
             
             <div class = "footerContent" id = "col_2">
             <ul class = "footerList">
-                <li>&#94;</li>
-                <li id = "navSpace">Space</li>
-                <li id = "navMars">Mars</li>
+                <li id = "navSpace"><a href="space.html">Space</a></li>
+                <li id = "navMars"><a href="mars.html">Mars</a></li>
             </ul>
             </div>
             
             <div class = "footerContent" id="col_3">
             <ul class = "footerList">
-                <li>a</li>
-                <li id = "navContact">Contact Us</li>
-                <li id = "navFollow">Follow Us</li>
+                <li id = "navContact"><a href="contact.html">Contact Us</a></li>
             </ul>
-                <div id = "footerIcons">
-                    <img class = "footerIcon" id="facebook" src="icons/facebook.png" alt="Facebook">
-                    <img class = "footerIcon" id="linkedIn" src="icons/linkedIn.png" alt="LinkedIn">
-                    <img class = "footerIcon" id="twitter" src="icons/twitter.png" alt="Twitter"> 
-                </div>
             </div>
+                <div id = "footerIcons">
+                    <a href ="http://www.facebook.com"><img class = "footerIcon" id="facebook" src="../icons/facebook.png" alt="Facebook"></a>
+                    <a href ="http://www.linkedin.com"><img class = "footerIcon" id="linkedIn" src="../icons/linkedIn.png" alt="LinkedIn"></a>
+                    <a href ="http://www.twitter.com"><img class = "footerIcon" id="twitter" src="../icons/twitter.png" alt="Twitter"></a> 
+                </div>
+            
         </div>
     </footer>
-    <script type="text/javascript" src="hamburger.js"></script>
+    <script type="text/javascript" src="../hamburger.js"></script>
 </body>
 </html>
