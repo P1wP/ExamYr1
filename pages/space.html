@@ -18,7 +18,7 @@
             <ul class = "navList">
                 <img id="closeNav" src="../icons/SVG/close.svg">
                 <li class = "navItem" id = navSpaceX><a href="../index.html">Home</a></li>
-                <li class = "navItem" id = "navRockets"><a href="rockets.html">Rockets</a></li>
+                <li class = "navItem" id = "navRockets"><a href="rockets.html">Tech</a></li>
                 <li class = "navItem" id = "navSpace"><a href="space.html">Space</a></li>
                 <li class = "navItem" id = "navMars"><a href="mars.html">Mars</a></li>
                 <li class = "navItem" id = "navContact"><a href="contact.html">Contact Us</a></li>
@@ -27,9 +27,26 @@
     </header>
     <main id="container">
         <div id="content">
-            <div class ="contentHome"><h1>ISS</h1></div>
-            <div id ="contentSpaceStream">
-                <iframe width="480" height="270" src="http://www.ustream.tv/embed/17074538" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+            <div class ="contentHome">
+                <h1>ISS</h1>
+            </div>
+            <div id="issContainer">
+             
+                <div id="issInfo">
+                    <P>Longitude: <span id="longitude"></span></P>
+                    <p>Latitude: <span id="latitude"></span></p>
+                </div>
+            
+                <div id ="spaceStream">
+                    <iframe width="480" height="270" src="http://www.ustream.tv/embed/17074538" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+                </div>
+                
+                <div id="currentCrew">
+                    <p>People on board: <span id="people"></span></p>
+                    <h3>Current Crew</h3>
+                   
+                </div>
+        
             </div>
             
         </div>
@@ -42,7 +59,7 @@
             <div class = "footerContent" id="col_1">
             <ul class = "footerList">
                 <li id = navSpaceX><a href="../index.html">Home</a></li>
-                <li id = "navRockets"><a href="rockets.html">Rockets</a></li>
+                <li id = "navRockets"><a href="rockets.html">Tech</a></li>
             </ul>
             </div>
             
@@ -67,5 +84,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="../hamburger.js"></script>
+    <script type="text/javascript" src="../scripts/space.js"></script>
 </body>
 </html>
