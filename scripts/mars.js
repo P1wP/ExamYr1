@@ -28,6 +28,7 @@ window.addEventListener("load", marsGoal);
 
 // DOM Elements
 var head = document.querySelector(".contentHome").firstChild;
+var test = document.getElementById("test");
 var textContent = document.querySelector(".contentMars");
 var img = document.querySelector(".imgContentMars");
 
@@ -61,7 +62,7 @@ function marsGoal(){
     var page = 1;
     indicator(page);
     head.innerHTML = mars.marsGoal[0].head;
-    textContent.innerHTML = mars.marsGoal[1].txt_1;
+    test.innerHTML = mars.marsGoal[1].txt_1;
     
     //Change background
     document.body.style.backgroundImage = "url(" + mars.marsGoal[2].imgSrc + ")";
@@ -72,7 +73,7 @@ function mars2022(){
     var page = 2;
     indicator(page);
     head.innerHTML = mars.mars2022[0].head;
-    textContent.innerHTML = mars.mars2022[1].list[0].li_head;
+    test.innerHTML = mars.mars2022[1].list[0].li_head;
     var ul = document.createElement("ul");
     ul.setAttribute("id", "marsUl2022");
     
@@ -90,7 +91,7 @@ function mars2024(){
     var page = 3;
     indicator(page);
     head.innerHTML = mars.mars2024[0].head;
-    textContent.innerHTML = mars.mars2022[1].list[0].li_head;
+    test.innerHTML = mars.mars2022[1].list[0].li_head;
     var ul = document.createElement("ul");
     ul.setAttribute("id", "marsUl2024");
     
