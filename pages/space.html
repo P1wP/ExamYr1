@@ -19,7 +19,7 @@
                 <img id="closeNav" src="../icons/SVG/close.svg">
                 <li class = "navItem" id = navSpaceX><a href="../index.html">Home</a></li>
                 <li class = "navItem" id = "navRockets"><a href="rockets.html">Tech</a></li>
-                <li class = "navItem" id = "navSpace"><a href="space.html">Space</a></li>
+                <li class = "navItem active" id = "navSpace"><a href="space.html">Space</a></li>
                 <li class = "navItem" id = "navMars"><a href="mars.html">Mars</a></li>
                 <li class = "navItem" id = "navContact"><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -27,14 +27,19 @@
     </header>
     <main id="container">
         <div id="content">
+            <div id="pageIndicator">
+                <img id="page1" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+                <img id="page2" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+            </div>
             <div class ="contentHome">
                 <h1>ISS</h1>
             </div>
             <div id="issContainer">
              
                 <div id="issInfo">
-                    <P>Longitude: <span id="longitude"></span></P>
-                    <p>Latitude: <span id="latitude"></span></p>
+                    <h2>Position</h2>
+                    <P>Longitude:<br> <span id="longitude"></span></P>
+                    <p>Latitude:<br> <span id="latitude"> </span></p>
                 </div>
             
                 <div id ="spaceStream">
@@ -43,13 +48,28 @@
                 
                 <div id="currentCrew">
                     <p>People on board: <span id="people"></span></p>
-                    <h3>Current Crew</h3>
+                    <h2>Current Crew</h2>
                    
                 </div>
         
-            </div>
-            
+            </div> 
         </div>
+        <div class="newContent">
+            <div class="nextBack next">
+                <img src="../icons/SVG/arrow_right.svg" alt="N">
+            </div>
+             <div class="nextBack back">
+                <img src="../icons/SVG/arrow_left.svg" alt="B">
+            </div>
+        </div>
+        
+        <div id="modalImg" class="modal">
+            <img id="closeModal" src="../icons/SVG/close.svg">
+            
+            <img id="clickedImg">
+            <p id="altText"></p>
+        </div>
+
     </main>
     <footer id="footer">
         <div id="footerReveal">
@@ -77,8 +97,8 @@
             </ul>
                 <div id = "footerIcons">
                     <a href ="http://www.facebook.com"><img class = "footerIcon" id="facebook" src="../icons/facebook.png" alt="Facebook"></a>
-                    <a href ="http://www.linkedin.com"><img class = "footerIcon" id="linkedIn" src="../icons/linkedIn.png" alt="LinkedIn"></a>
-                    <a href ="http://www.twitter.com"><img class = "footerIcon" id="twitter" src="../icons/twitter.png" alt="Twitter"></a> 
+                    <a href ="https://www.linkedin.com/company/spacex/"><img class = "footerIcon" id="linkedIn" src="../icons/linkedIn.png" alt="LinkedIn"></a>
+                    <a href ="https://twitter.com/spacex"><img class = "footerIcon" id="twitter" src="../icons/twitter.png" alt="Twitter"></a> 
                 </div>
             </div>
         </div>

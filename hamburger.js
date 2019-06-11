@@ -16,3 +16,4 @@ open.addEventListener("click", function(){
 close.addEventListener("click", function(){
     navigation.style.left ="-300px";
 })
+

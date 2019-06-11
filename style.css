@@ -16,6 +16,16 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+/*Fonts*/
+h1, h2{
+    font-family: 'Play', sans-serif;
+    color:#fff;
+}
+p, li, a{
+    font-family: 'Roboto', sans-serif; 
+    color: #E4E7FF;
+}
 /*----------------------
         NAV/header
 ------------------------*/
@@ -29,7 +39,6 @@ header{
 .logo{
     float: right;
     margin-right: 10px;
-    height: 30px;
 }
 
 #hamburger, #closeNav{
@@ -49,7 +58,6 @@ header{
     
 }
 .navList{
-    color: white;
     margin: 10px 0 0 0;
     padding: 0;
     display: block;
@@ -57,7 +65,7 @@ header{
 
 .navList li a{
     text-decoration: none;
-    color: white;
+    
 }
 
 
@@ -66,7 +74,6 @@ header{
     list-style: none;
     margin-bottom: 10px;
     padding: 10px;
-
 }
 
 #closeNav{
@@ -79,6 +86,26 @@ header{
 }
 
 
+/*Page Indicator*/
+#pageIndicator{
+    text-align: center;
+    width: 100%;
+}
+.indicator{
+    width: 100%;
+    max-width: 15px;
+}
+
+/*--------------------------
+        Next & back btn
+---------------------------*/
+/*hidden on mobile */
+.newContent{
+    display: none;
+}
+
+
+
 /*--------------------------
             CONTENT
 --------------------------*/
@@ -86,12 +113,11 @@ header{
 #container {
     height: 100vh;
     width: 100%;
-    color: white;
 }
 
 #content{
     width: 100%;
-    max-height: 450px;
+    max-height: 650px;
     background-color: rgba(109,109,109, 0.4);
     border-radius: 10px;
     margin: 0;
@@ -101,10 +127,11 @@ header{
     
 }
 
+
+
 /* HOME/INDEX */
-.contentHome{
+.contentHome, .contentLearn{
     text-align: center;
-    font-family: 'Play', sans-serif;
 
 }
 .imgContentHome{
@@ -136,13 +163,13 @@ header{
 }
 
 #rocketData{
-    display: flex;
-    flex-wrap: wrap;
     width: 70%;
     margin-left: 10%;
+
 }
 
 #rocket_col{
+    margin: 5px 0 0 0;
     flex-direction: column;
     width: 50%;
 }
@@ -152,17 +179,29 @@ header{
 }
 
 .title{
-    margin-bottom: 0;
+    margin: 5px 0 0 0;
     font-weight: bold;
     font-size: 1.3em;
 }
 #mass, #hight, #stages, #diameter{
     margin-top: 0;
+    padding-top: 0;
 }
 
 .smaller{
     font-size: 12px;
     font-style: italic;
+}
+
+.spaceSuit{
+    width: 70%;
+    margin-left: 10%;
+}
+
+.spaceSuit ul{
+    margin: 0 auto;
+    padding: 10px 10px 0 20px;
+    list-style:square;
 }
 
 
@@ -203,8 +242,43 @@ header{
     padding: 0;
 }
 
+.spaceImg{
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
 
+.spaceImg img{
+    width: 100%;
+    max-width: 130px;
+    height: 100%;
+}
 
+/* MODAL */
+#modalImg{
+    display: none;
+}
+
+.modal{
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#closeModal{
+    float: right;
+    width: 100%;
+    max-width: 50px;
+}
+
+#clickedImg{
+    width: 100%;
+}
+#altText{
+    text-align: center;
+    width: 100%;
+}
 
 
 /* Contact Us */
@@ -212,7 +286,7 @@ header{
     text-align: center;
 }
 #contactForm{
-    width: 30%;
+    width: 80%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -229,7 +303,6 @@ header{
 }
 
 #contactBtn{
-    color: white;
     background-color: #313030;
     cursor: pointer;
     height: 30px;
@@ -276,13 +349,10 @@ header{
     
 }
 .footerContent, .footerContent a{
-    color: white;
     text-align: center;
 }
 
-.footerContent a{
-    cursor: pointer;
-}
+
 
 .footerContent ul{
     list-style: none;
@@ -293,9 +363,9 @@ header{
     text-align: center;
     width: 100%;
 }
-#footerIcons img{
-    margin: 0 auto; 
-    
+#instagram, #linkedIn, #twitter{
+    width: 8%;
+    margin-left: 10px;
 }
 
 
@@ -308,3 +378,140 @@ header{
     transition-duration: 2s;
 }
 
+/* DESKTOP STYLES */
+@media(min-width:501px){
+    p, li, a{
+        font-family: 'Roboto', sans-serif; 
+        color: #E4E7FF;
+        font-size: 24px;
+    }
+    
+    /* BUTTONS */
+    .newContent{
+        display: block;
+    }
+    .next, .back{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    
+    }
+
+    .next{
+        right: 5%;
+        width: 20px;
+    }
+    .back{
+        left: 5%;
+        width: 20px;
+    }
+
+    /* MAIN CONTENT DIV */
+    #content{
+        width: 80%;
+        left: 10%;
+    } 
+    
+    .contentHome h1{
+        margin: 10px;
+    }
+    
+    .contentHome{
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* HOME */
+    
+    
+    /* ROCKET/TECH */
+    #rocketData{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #rocketData, .spaceSuit{
+        margin: 0 auto 0 0;
+        width: 40%;
+        font-size: 24px;
+    }
+    
+    .spaceSuit{
+        margin-bottom: 1em;
+    }
+    
+    #rocketImg{
+        width: 20%;
+        margin: 0 0 0 auto;
+    }
+    
+    /* SPACE */
+    #issContainer{
+        width: 80%;
+        margin: 0 auto;    
+    }
+    
+    #currentCrew, #spaceImg_8{
+        padding-bottom: 2%;
+    }
+    
+    .spaceImg{
+        width: 25%;
+    }
+    
+    .spaceImg img{
+        width: 100%;
+        max-width: 300px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    
+    .modal{
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        left: 10%;
+        
+    }
+  
+    
+    /* MARS */
+    .contentHome h1{
+        text-align: center;
+    }
+    
+    .contentMars{
+        margin: 0 auto;
+        width: 80%;
+        
+    }
+    #marsUl2022, #marsUl2024{
+        margin-top: 0;
+        padding-left: 1em;
+    }
+    
+    /* CONTACT */
+    #contactEmail, #contactText, #contactBtn{
+        width: 50%;
+        height: 30px;
+        border-style: none;
+        margin-bottom: 5px;
+        border-radius: 2.5px;
+    }
+    #contactText{
+        height: 150px;
+    }
+    
+    /* FOOTER */
+    .footerContent a{
+        font-size: 32px;
+    }
+    .footerIcon{
+        width: 30px;
+    }
+    
+}

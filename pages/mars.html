@@ -18,7 +18,7 @@
             <ul class = "navList">
                 <img id="closeNav" src="../icons/SVG/close.svg">
                 <li class = "navItem" id = navSpaceX><a href="../index.html">Home</a></li>
-                <li class = "navItem" id = "navRockets"><a href="rockets.html">Rockets</a></li>
+                <li class = "navItem" id = "navRockets"><a href="rockets.html">Tech</a></li>
                 <li class = "navItem" id = "navSpace"><a href="space.html">Space</a></li>
                 <li class = "navItem" id = "navMars"><a href="mars.html">Mars</a></li>
                 <li class = "navItem" id = "navContact"><a href="contact.html">Contact Us</a></li>
@@ -27,9 +27,22 @@
     </header>
     <main id="container">
         <div id="content">
-            <div class ="contentHome"><h1>Mars</h1></div>
-            <div class ="contentHome">Learn more</div>
-            <div class ="imgContentHome"><img id="arrowDown" src="../icons/SVG/arrowDown.svg" alt="arrow"></div>
+              <div id="pageIndicator">
+                <img id="page1" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+                <img id="page2" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+                <img id="page3" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+            </div>
+            <div class ="contentHome"><h1></h1></div>
+            <p class ="contentHome contentMars">Learn more</p>
+            <div class ="imgContenMars"><img></div>
+        </div>
+        <div class="newContent">
+            <div class="nextBack next">
+                <img src="../icons/SVG/arrow_right.svg" alt="N">
+            </div>
+             <div class="nextBack back">
+                <img src="../icons/SVG/arrow_left.svg" alt="B">
+            </div>
         </div>
     </main>
     <footer id="footer">
@@ -40,7 +53,7 @@
             <div class = "footerContent" id="col_1">
             <ul class = "footerList">
                 <li id = navSpaceX><a href="../index.html">Home</a></li>
-                <li id = "navRockets"><a href="rockets.html">Rockets</a></li>
+                <li id = "navRockets"><a href="rockets.html">Tech</a></li>
             </ul>
             </div>
             
@@ -65,5 +78,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="../hamburger.js"></script>
+    <script type="text/javascript" src="../scripts/mars.js"></script>
 </body>
 </html>

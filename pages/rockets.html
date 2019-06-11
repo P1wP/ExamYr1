@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 <link type="text/css" rel="stylesheet" href="../style.css">
 <link href="https://fonts.googleapis.com/css?family=Play:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
 
 	<title> Rockets </title>
 </head>
@@ -27,7 +30,14 @@
     </header>
     <main id="container">
         <div id="content" class="rocketContent">
-            <div class ="contentHome rocketHeading" id="name"><h1>Falcon 9</h1></div>
+            <div id="pageIndicator">
+                <img id="page1" class="indicator" src="../icons/SVG/filled.svg" alt="indicator">
+                <img id="page2" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+                <img id="page3" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+                <img id="page4" class="indicator" src="../icons/SVG/unFilled.svg" alt="indicator">
+            </div>
+            <div class ="contentHome rocketHeading" id="name"><h1>Falcon 9</h1>
+            </div>
             <div id="rocketImg">
                 <img id="img" src="../icons/rocket_img/SVG/falcon9.svg" alt="Icon Falcon 9">
             </div>
@@ -41,13 +51,21 @@
                     <p id="diameter">3,7m <span id="diameterFeet" class="smaller">12ft</span></p>
                 </div>
                 <div id="rocket_row">
-                    <p class="title">Stages</p>
+                    <p class="title dragon">Stages</p>
                     <p id="stages">2 <span class="smaller">&#40;1st stages reusable &#41;</span></p>
                 </div>
                 <div id="rocket_row">
                 <p class="title"><b>Mass</b></p>
-                <p id="mass">549,054Kg <span id="massLb" class="smaller">1,207,920lb</span></p>
+                <p id="mass">549054Kg <span id="massLb" class="smaller">1207920Lb</span></p>
                 </div>
+            </div>
+        </div>
+        <div class="newContent">
+            <div class="nextBack next">
+                <img src="../icons/SVG/arrow_right.svg" alt="N">
+            </div>
+             <div class="nextBack back">
+                <img src="../icons/SVG/arrow_left.svg" alt="B">
             </div>
         </div>
     </main>
@@ -84,5 +102,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="../hamburger.js"></script>
+    <script type="text/javascript" src="../scripts/rockets.js"></script>
 </body>
 </html>
