@@ -1,28 +1,31 @@
+// CHANGE BACKGROUND
+document.body.style.backgroundImage = 'url("../img/2012_-_9_crs1_launch.jpg")';
+
 /*--------------------------------------------------------------------------
                                 FETCH API
 ---------------------------------------------------------------------------*/
 fetch("https://api.spacexdata.com/v3/rockets/falcon9").then(function (result) {
     return result.json();
-}).then(function (pos) {
-    spaceXfalcon9 = pos;
+}).then(function (tech) {
+    spaceXfalcon9 = tech;
 });
 
 fetch("https://api.spacexdata.com/v3/rockets/falconheavy").then(function (result) {
     return result.json();
-}).then(function (pos) {
-    spaceXfalconHeavy = pos;
+}).then(function (tech) {
+    spaceXfalconHeavy = tech;
 });
 
 fetch("https://api.spacexdata.com/v3/dragons/dragon2").then(function (result) {
     return result.json();
-}).then(function (pos) {
-    spaceXdragon = pos;
+}).then(function (tech) {
+    spaceXdragon = tech;
 });
 
 fetch("https://api.spacexdata.com/v3/launches").then(function (result) {
     return result.json();
-}).then(function (pos) {
-    spaceXlaunches = pos;
+}).then(function (tech) {
+    spaceXlaunches = tech;
 });
 
 /* NO API FOR SPACESUITE WILL USE THIS OBJECT ARRAY IN SPACESUITE()
@@ -39,7 +42,6 @@ var spaceSuit = {
     ]
 };
 
-var spaceSuiteObj = {li1:"3D printed space suit helmet", li2:"Touchscreen compatible gloves"}
 
 // FETCHED INFO FROM API
 var spaceXfalcon9 = [];

@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+<meta name="keywords" content="spacex, contact, rockets, spacecraft, starship, , falcon, dragon, heavy, spacesuit, elon, musk, interplantery, mars, transport, contact, youtube, instagram, twitter">
+<meta name="description" content="This is a school project, and has no affiliation to spaceX what so ever.">
+    
 <link type="text/css" rel="stylesheet" href="../style.css">
 <link href="https://fonts.googleapis.com/css?family=Play:700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -18,8 +20,8 @@
         <div class = "logo"><img src ="../icons/spacex_logo_white.png" alt="SpaceX Logo"> </div>
         <img id="hamburger" src="../icons/SVG/hamburger.svg" alt ="Hamburger">
         <nav id = "navigation">
+            <img id="closeNav" src="icons/SVG/close.svg" alt="close">
             <ul class = "navList">
-                <img id="closeNav" src="../icons/SVG/close.svg">
                 <li class ="navItem" id ="navSpaceX"><a href="../index.html">Home</a></li>
                 <li class ="navItem" id ="navRockets"><a href="rockets.html">Tech</a></li>
                 <li class ="navItem" id ="navSpace"><a href="space.html">Space</a></li>
@@ -42,19 +44,19 @@
                 <img id="img" src="../icons/rocket_img/SVG/falcon9.svg" alt="Icon Falcon 9">
             </div>
             <div id="rocketData">
-                <div id="rocket_col">
+                <div class="rocket_col">
                     <p class="title"><b>Hight</b></p>
                     <p id="hight">70m <span id="hightFeet" class="smaller">229,6ft</span></p>
                 </div>
-                <div id="rocket_col">
+                <div class="rocket_col">
                     <p class="title">Diameter</p>
                     <p id="diameter">3,7m <span id="diameterFeet" class="smaller">12ft</span></p>
                 </div>
-                <div id="rocket_row">
+                <div class="rocket_row">
                     <p class="title dragon">Stages</p>
                     <p id="stages">2 <span class="smaller">&#40;1st stages reusable &#41;</span></p>
                 </div>
-                <div id="rocket_row">
+                <div class="rocket_row">
                 <p class="title"><b>Mass</b></p>
                 <p id="mass">549054Kg <span id="massLb" class="smaller">1207920Lb</span></p>
                 </div>
@@ -76,29 +78,26 @@
         <div id = "footerCol">
             <div class = "footerContent" id="col_1">
             <ul class = "footerList">
-                <li id = navSpaceX><a href="../index.html">Home</a></li>
-                <li id = "navRockets"><a href="rockets.html">Tech</a></li>
+                <li id = "footSpaceX"><a href="http://www.spacex.com">SpaceX Official</a></li>
+                <li id = "footContact"><a href="../pages/contact.html">Contact Us</a></li>
             </ul>
             </div>
             
             <div class = "footerContent" id = "col_2">
-            <ul class = "footerList">
-                <li id = "navSpace"><a href="space.html">Space</a></li>
-                <li id = "navMars"><a href="mars.html">Mars</a></li>
-            </ul>
+                <p><q>Seems like an opportune moment to bring up the Fermi Paradox, aka 'where are the aliens?' Really odd that we see no sign of them</q></p>
+                <p><i>- Elon Musk</i></p>
             </div>
             
             <div class = "footerContent" id="col_3">
-            <ul class = "footerList">
-                <li id = "navContact"><a href="contact.html">Contact Us</a></li>
-            </ul>
-            </div>
-                <div id = "footerIcons">
-                    <a href ="http://www.facebook.com"><img class = "footerIcon" id="facebook" src="../icons/facebook.png" alt="Facebook"></a>
-                    <a href ="http://www.linkedin.com"><img class = "footerIcon" id="linkedIn" src="../icons/linkedIn.png" alt="LinkedIn"></a>
-                    <a href ="http://www.twitter.com"><img class = "footerIcon" id="twitter" src="../icons/twitter.png" alt="Twitter"></a> 
-                </div>
             
+                <p id = "footFollow">Social Media</p>
+            
+                <div id = "footerIcons">
+                    <a href ="https://www.instagram.com/spacex/?hl=nb"><img class = "footerIcon" id="instagram" src="../icons/instaColor.svg" alt="Instagram"></a>
+                    <a href ="https://www.youtube.com/user/spacexchannel/featured"><img class = "footerIcon" id="youtube" src="../icons/youtube_social_squircle_red.png" alt="Youtube"></a>
+                    <a href ="https://twitter.com/spacex"><img class = "footerIcon" id="twitter" src="../icons/twitterColor.svg" alt="Twitter"></a> 
+                </div>
+            </div>
         </div>
     </footer>
     <script type="text/javascript" src="../hamburger.js"></script>

@@ -1,4 +1,5 @@
-
+// CHANGE BACKGROUND
+document.body.style.backgroundImage = 'url("../img/spaceBg.jpg")';
 /*--------------------------------------------------------------------------
                                     ISS API
 ---------------------------------------------------------------------------*/
@@ -31,6 +32,8 @@ var people = document.getElementById("people");
 ---------------------*/
 var page1 = document.getElementById("page1");
 var page2 = document.getElementById("page2");
+var page = "";
+
 function indicator(page){
     if(page === 1){
         page1.setAttribute("src", "../icons/SVG/filled.svg");
@@ -49,7 +52,7 @@ function indicator(page){
 window.addEventListener("load", issContent);
 
 function issContent(){
-    var page = 1;
+    page = 1;
     indicator(page);
     locationIss();
     astronauts();
@@ -107,11 +110,15 @@ var altText = document.getElementById("altText");
 ---------------------------------------------------------------------------*/
 //ISS CONTENT
 function hideISS(){
+    page = 2;
+    indicator(page);
     issInfo.style.display = "none";
     spaceStream.style.display = "none";
     currentCrew.style.display = "none";
 }
 function showISS(){
+    page = 1;
+    indicator(page);
     issInfo.style.display = "block";
     spaceStream.style.display = "block";
     currentCrew.style.display = "block";

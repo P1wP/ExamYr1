@@ -1,7 +1,7 @@
 var mars = {
     marsGoal: [
         {head: "Mission to Mars"}, 
-        {txt_1: "Our aspirational goal is to send our first cargo mission to Mars in 2022 Mission, with both cargo and crew, is targeted for 2024"}, 
+        {txt_1: "Our aspirational goal is to send our first cargo mission to Mars in 2022 Mission. Mission with both cargo and crew, is targeted to be sent out in 2024"}, 
         {imgSrc: "../img/space_5.jpg"}
     ],
     mars2022: [
@@ -19,16 +19,21 @@ var mars = {
             {li_head: "Misson objectives"}, 
             {li: "Build a propellant depot"},
             {li: "Prepear for future crew flights"}]},
-        {text: "The ships from these initial missions will also serve as the beginnings of the first Mars base, from which we can build a thriving city and eventually a self-sustaining civilization on Mars."},
+        {text: "The ships from these first missions will also serve as the beginnings of the first Mars base, from which we can build a thriving city and eventually a self-sustaining civilization on Mars."},
         {imgSrc: "IMG SRC!"}
     ]
 };
 
-window.addEventListener("load", marsGoal);
+window.addEventListener("load", function(){
+    //Change background
+    document.body.style.backgroundImage = "url(" + mars.marsGoal[2].imgSrc + ")";
+    showGoal();
+    
+});
 
 // DOM Elements
 var head = document.querySelector(".contentHome").firstChild;
-var test = document.getElementById("test");
+var textMars = document.getElementById("textMars");
 var textContent = document.querySelector(".contentMars");
 var img = document.querySelector(".imgContentMars");
 
@@ -57,23 +62,7 @@ function indicator(page){
 }
 
 
-
-function marsGoal(){
-    var page = 1;
-    indicator(page);
-    head.innerHTML = mars.marsGoal[0].head;
-    test.innerHTML = mars.marsGoal[1].txt_1;
-    
-    //Change background
-    document.body.style.backgroundImage = "url(" + mars.marsGoal[2].imgSrc + ")";
-    
-}
-
 function mars2022(){
-    var page = 2;
-    indicator(page);
-    head.innerHTML = mars.mars2022[0].head;
-    test.innerHTML = mars.mars2022[1].list[0].li_head;
     var ul = document.createElement("ul");
     ul.setAttribute("id", "marsUl2022");
     
@@ -88,10 +77,6 @@ function mars2022(){
 }
 
 function mars2024(){
-    var page = 3;
-    indicator(page);
-    head.innerHTML = mars.mars2024[0].head;
-    test.innerHTML = mars.mars2022[1].list[0].li_head;
     var ul = document.createElement("ul");
     ul.setAttribute("id", "marsUl2024");
     
@@ -110,7 +95,49 @@ function mars2024(){
     
 }
 
+// HIDE UNWANTED CONTENT
+function hideGoal(){
+    
+}
 
+function hide2022(){
+    var hideUl = document.getElementById("marsUl2022");
+    hideUl.style.display = "none";
+}
+function hide2024(){
+    var hideUl = document.getElementById("marsUl2024");
+    var hideTxt = document.getElementById("marsText");
+    hideUl.style.display = "none";
+    hideTxt.style.display = "none";
+}
+
+// SHOW WANTED CONTENT
+
+function showGoal(){
+    var page = 1;
+    indicator(page);
+    head.innerHTML = mars.marsGoal[0].head;
+    textMars.innerHTML = mars.marsGoal[1].txt_1;
+}
+
+function show2022(){
+    var page = 2;
+    indicator(page);
+    head.innerHTML = mars.mars2022[0].head;
+    textMars.innerHTML = mars.mars2022[1].list[0].li_head;
+    var showUl = document.getElementById("marsUl2022");
+    showUl.style.display = "block";
+}
+function show2024(){
+    var page = 3;
+    indicator(page);
+    head.innerHTML = mars.mars2024[0].head;
+    textMars.innerHTML = mars.mars2022[1].list[0].li_head;
+    var showUl = document.getElementById("marsUl2024");
+    var showTxt = document.getElementById("marsText");
+    showUl.style.display = "block";
+    showTxt.style.display = "block";
+}
 
 
 /* Slide functionality for mobile user.
@@ -148,36 +175,43 @@ function mobileSlide(){
         if(count === 0){
             count++;
             console.log(count);
-            mars2022();
+            show2022();
+            hide2024();
         }
         else if(count === 1 | count === -2){
             count++;
             console.log(count);
-            mars2024();
+            show2024();
+            hide2022();
         }
         else{
             count = 0;
             console.log(count);
-            marsGoal();
-        }
-
+            hide2022();
+            hide2024();
+            showGoal();
+        } 
     }
     //BACK
     else if(back >= minDistance && next <=0){
         if(count === 0){
             count--;
             console.log(count);
-            mars2024();
+            show2024();
+            hide2022();
         }
         else if(count === -1 | count === 2){
             count--;
             console.log(count);
-            mars2022();
+            show2022();
+            hide2024();
         }
         else{
             count = 0;
             console.log(count);
-            marsGoal();
+            hide2022();
+            hide2024();
+            showGoal();
         }
         
     }
@@ -189,38 +223,51 @@ var next = document.querySelector(".next");
 var back = document.querySelector(".back");
 
 next.addEventListener("click", function(){
-  if(count === 0){
-            count++;
-            console.log(count);
-            mars2022();
-        }
-        else if(count === 1 | count === -2){
-            count++;
-            console.log(count);
-            mars2024();
-        }
-        else{
-            count = 0;
-            console.log(count);
-            marsGoal();
-        } 
+    if(count === 0){
+        count++;
+        console.log(count);
+        show2022();
+        hide2024();
+    }
+    else if(count === 1 | count === -2){
+        
+        count++;
+        console.log(count);
+        show2024();
+        hide2022();
+    }
+    else{
+        count = 0;
+        console.log(count);
+        hide2022();
+        hide2024();
+        showGoal();
+    } 
 })
 
 back.addEventListener("click", function(){
-        if(count === 0){
-            count--;
-            console.log(count);
-            mars2024();
-        }
-        else if(count === -1 | count === 2){
-            count--;
-            console.log(count);
-            mars2022();
-        }
-        else{
-            count = 0;
-            console.log(count);
-            marsGoal();
-        }
+    if(count === 0){
+        count--;
+        console.log(count);
+        show2024();
+        hide2022();
+    }
+    else if(count === -1 | count === 2){
+        count--;
+        console.log(count);
+        show2022();
+        hide2024();
+    }
+    else{
+        count = 0;
+        console.log(count);
+        hide2022();
+        hide2024();
+        showGoal();
+    }
 })
 
+mars2022();
+mars2024();
+hide2022();
+hide2024();
